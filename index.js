@@ -11,4 +11,4 @@ app.use('/api/v1/user', user)
 app.use('/api/v1/recommendation/', recommendation)
 
 
-app.listen(4000, console.log('we are running on port 4000'))
+app.listen(process.env.PORT || 4000, console.log('we are running on port 4000'))
