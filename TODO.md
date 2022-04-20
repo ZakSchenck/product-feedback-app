@@ -14,8 +14,8 @@ PART 1
 8. POST new reply
 9. POST new recommendation
 10. PUT/PATCH recommendation
-11. DELETE comment
-12. DELETE recommendation
+<!-- 11. DELETE comment -->
+<!-- 12. DELETE recommendation -->
 
 PART 2
 
