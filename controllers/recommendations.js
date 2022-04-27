@@ -2,7 +2,6 @@ const { Data } = require("../db/data");
 const db = require("../db/connection");
 
 const getAllRecommendations = (req, res) => {
-  // res.status(200).json({currentUser: Data[0].currentUser})
   db.query('select * from public."productRequests"', (error, dbRes) => {
     if (error) {
       res.status(500).json(error.message);
@@ -13,7 +12,6 @@ const getAllRecommendations = (req, res) => {
 };
 
 const getSingleRecommendation = (req, res) => {
-  // res.status(200).json({currentUser: Data[0].currentUser})
   db.query(
     'select * from public."productRequests" where id = $1',
     [Number(req.params.id)],
@@ -43,7 +41,6 @@ const getAllRecommendationsForUser = (req, res) => {
   };
 
 const createRecommendation = (req, res) => {
-  // res.status(200).json({currentUser: Data[0].currentUser})
   const query =
     'INSERT INTO public."productRequests"(title, category, upvotes, status, description, "creator_ID") VALUES ($1, $2, $3, $4, $5, $6) RETURNING *';
   const b = req.body
